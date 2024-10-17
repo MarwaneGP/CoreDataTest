@@ -18,6 +18,8 @@
 		0C998E952CBFBB8E00BDB24D /* iconUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C998E942CBFBB8E00BDB24D /* iconUIView.swift */; };
 		0C998E972CBFC1F400BDB24D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C998E962CBFC1F400BDB24D /* File.swift */; };
 		ECA24A072CC1075200F148F8 /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA24A062CC1075200F148F8 /* AppDetailView.swift */; };
+		ECA24A092CC1565D00F148F8 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA24A082CC1565D00F148F8 /* AchievementsViewModel.swift */; };
+		ECA24A0B2CC159B400F148F8 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA24A0A2CC159B400F148F8 /* AchievementsView.swift */; };
 		ECFB22102CBFF99100EF03E7 /* StorageStudents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFB220E2CBFF99100EF03E7 /* StorageStudents.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		0C998E942CBFBB8E00BDB24D /* iconUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconUIView.swift; sourceTree = "<group>"; };
 		0C998E962CBFC1F400BDB24D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		ECA24A062CC1075200F148F8 /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		ECA24A082CC1565D00F148F8 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
+		ECA24A0A2CC159B400F148F8 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		ECFB220F2CBFF99100EF03E7 /* StorageStudents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorageStudents.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +97,9 @@
 				0C4116A92CBE90BD007AEA9C /* CoreDataTestApp.swift */,
 				0C4116C02CBEA9CA007AEA9C /* MainView.swift */,
 				0C4116C42CBEA9FD007AEA9C /* MenuAppsView.swift */,
+				ECA24A0A2CC159B400F148F8 /* AchievementsView.swift */,
 				ECA24A062CC1075200F148F8 /* AppDetailView.swift */,
+				ECA24A082CC1565D00F148F8 /* AchievementsViewModel.swift */,
 				0C998E842CBFA3A600BDB24D /* DataController.swift */,
 				0C4116C82CBEB9A2007AEA9C /* ViewModel.swift */,
 				ECFB220E2CBFF99100EF03E7 /* StorageStudents.xcdatamodeld */,
@@ -240,8 +246,10 @@
 				0C4116C92CBEB9A2007AEA9C /* ViewModel.swift in Sources */,
 				ECA24A072CC1075200F148F8 /* AppDetailView.swift in Sources */,
 				ECFB22102CBFF99100EF03E7 /* StorageStudents.xcdatamodeld in Sources */,
+				ECA24A092CC1565D00F148F8 /* AchievementsViewModel.swift in Sources */,
 				0C998E972CBFC1F400BDB24D /* File.swift in Sources */,
 				0C998E952CBFBB8E00BDB24D /* iconUIView.swift in Sources */,
+				ECA24A0B2CC159B400F148F8 /* AchievementsView.swift in Sources */,
 				0C4116AA2CBE90BD007AEA9C /* CoreDataTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

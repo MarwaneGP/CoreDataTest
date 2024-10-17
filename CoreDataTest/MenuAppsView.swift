@@ -29,7 +29,17 @@ struct MenuAppsView: View {
 
                         ForEach(availableApps.allCases, id: \.self) { nameApp in
                             NavigationLink(destination: AppDetailView(appName: nameApp.rawValue)) {
-                                IconView(image: Image("cloud"), name: nameApp.rawValue)
+                                if (nameApp.rawValue == "mystery") {
+                                    IconView(image: Image("guessing"), name: nameApp.rawValue)
+                                }
+                                if (nameApp.rawValue == "jackpot") {
+                                    IconView(image: Image("sotls"), name: nameApp.rawValue)
+                                }
+                                if (nameApp.rawValue == "autre") {
+                                    IconView(image: Image("animals"), name: nameApp.rawValue)
+                                }
+                                
+                                
                             }
                         }
                     }

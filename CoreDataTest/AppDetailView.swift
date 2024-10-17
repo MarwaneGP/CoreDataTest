@@ -12,13 +12,8 @@ struct AppDetailView: View {
         case jackpot = "jackpot"
         case autre = "autre"
     }
-    //Jackpot
+
     @StateObject private var viewModel = MainViewModel()
-    
-    
-    //mystery
-    
-    
     
     let appName: String
     
@@ -49,12 +44,10 @@ struct AppDetailView: View {
                                 .padding()
                                 .foregroundColor(.white)
                             
-                            
                             Text("Remaining Guesses: \(viewModel.remainingGuesses)")
                                 .font(.subheadline)
                                 .padding()
                                 .foregroundColor(.white)
-                            
                             
                             ScrollView(.horizontal) {
                                 HStack(spacing: 10) {
@@ -77,7 +70,6 @@ struct AppDetailView: View {
                                 .padding(.horizontal)
                             }
                             
-                            
                             if !viewModel.message.isEmpty {
                                 Text(viewModel.message)
                                     .font(.title2)
@@ -85,7 +77,6 @@ struct AppDetailView: View {
                                     .padding()
                                     .foregroundColor(.white)
                             }
-                            
                             
                             Button(action: {
                                 viewModel.startNewGame()
@@ -102,12 +93,30 @@ struct AppDetailView: View {
                         .padding()
                         .navigationTitle("Animal Guessing Game")
                         
+                        NavigationLink(destination: AchievementsView(achievementsViewModel: viewModel.achievementsViewModel)) {
+                            Text("View Achievements")
+                                .font(.title)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        
                     case .jackpot:
                         VStack {
                             Text("Jackpot Game")
                                 .font(.largeTitle)
                                 .foregroundColor(.white)
                                 .padding()
+                            
+                            // Difficulty Picker
+                            Picker("Select Difficulty", selection: $viewModel.difficulty) {
+                                Text("Easy").tag(MainViewModel.Difficulty.easy)
+                                Text("Medium").tag(MainViewModel.Difficulty.medium)
+                                Text("Hard").tag(MainViewModel.Difficulty.hard)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .padding()
                             
                             HStack {
                                 ForEach(viewModel.slots.indices, id: \.self) { index in
@@ -129,7 +138,7 @@ struct AppDetailView: View {
                                 .padding()
                             
                             Button(action: {
-                                viewModel.spin() // Call the spin method from the ViewModel
+                                viewModel.spin()
                             }) {
                                 Text("Spin!")
                                     .font(.title)
@@ -141,6 +150,14 @@ struct AppDetailView: View {
                             .padding()
                         }
                         .padding()
+                        NavigationLink(destination: AchievementsView(achievementsViewModel: viewModel.achievementsViewModel)) {
+                            Text("View Achievements")
+                                .font(.title)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
                         
                     case .autre:
                         Text("This is the autre App. Perform your other things here.")
@@ -186,6 +203,14 @@ struct AppDetailView: View {
                         }
                         .padding()
                         .navigationTitle("Memory Match Game")
+                        NavigationLink(destination: AchievementsView(achievementsViewModel: viewModel.achievementsViewModel)) {
+                            Text("View Achievements")
+                                .font(.title)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
                         
                     case .none:
                         Text("App not found.")
@@ -197,11 +222,3 @@ struct AppDetailView: View {
         }
     }
 }
-
-
-
-
-
-
-
-
