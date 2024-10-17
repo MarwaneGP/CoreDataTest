@@ -40,7 +40,7 @@ struct MainView: View {
                                 .frame(width: 246, height: 44)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                             
-                            TextField("Password", text: $password)
+                            SecureField("Password", text: $password)
                                 .frame(width: 246, height: 44)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                             

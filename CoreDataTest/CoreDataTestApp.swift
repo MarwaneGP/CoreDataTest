@@ -14,7 +14,7 @@ struct CoreDataTestApp: App {
             MainView()
         }
         
-    }
+    }s
     
 }
 import SwiftUI

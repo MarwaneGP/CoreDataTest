@@ -146,6 +146,46 @@ struct AppDetailView: View {
                         Text("This is the autre App. Perform your other things here.")
                             .foregroundColor(.white)
                             .padding()
+                        VStack {
+                            Text("Score: \(viewModel.score)")
+                                .font(.largeTitle)
+                                .foregroundColor(.yellow)
+                                .padding()
+                            
+                            Text(viewModel.message)
+                                .font(.title2)
+                                .foregroundColor(.green)
+                                .padding()
+                            
+                            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 20) {
+                                ForEach(viewModel.cards) { card in
+                                    Button(action: {
+                                        viewModel.selectCard(card)
+                                    }) {
+                                        Text(card.isFaceUp ? card.name : "?")
+                                            .font(.title)
+                                            .frame(width: 70, height: 70)
+                                            .background(Color.blue)
+                                            .cornerRadius(10)
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                            
+                            Button(action: {
+                                viewModel.startNewGame()
+                            }) {
+                                Text("Restart Game")
+                                    .font(.title)
+                                    .padding()
+                                    .background(Color.red)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                        }
+                        .padding()
+                        .navigationTitle("Memory Match Game")
                         
                     case .none:
                         Text("App not found.")
